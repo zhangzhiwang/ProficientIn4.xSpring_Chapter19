@@ -30,7 +30,7 @@ public class DateConverter implements Converter {
 	 *	Java对象转xml的逻辑
 	 */
 	public void marshal(Object source, HierarchicalStreamWriter writer, MarshallingContext context) {
-		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd hh:mm:ss");
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyy@MM@dd hh:mm:ss");
 		writer.setValue(simpleDateFormat.format(source));
 	}
 

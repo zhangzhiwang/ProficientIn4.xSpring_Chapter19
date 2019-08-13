@@ -33,8 +33,9 @@ public class XStreamUtilTest extends TestCase {
 		
 //		XStreamUtil.object2Xml(user, "/Users/zhangzhiwang/Desktop/xStreamSample.xml");
 //		XStreamUtil.user2Xml(user, "/Users/zhangzhiwang/Desktop/xStreamSample_user.xml");
-		User result = (User) XStreamUtil.xml2Object("/Users/zhangzhiwang/Desktop/xStreamSample.xml");
-		System.out.println(result);
+//		User result = (User) XStreamUtil.xml2Object("/Users/zhangzhiwang/Desktop/xStreamSample.xml");
+//		System.out.println(result);
+		XStreamUtil.object2XmlAnnotation(user, "/Users/zhangzhiwang/Desktop/xStreamSampleAnnotaion.xml");
 	}
 
 }

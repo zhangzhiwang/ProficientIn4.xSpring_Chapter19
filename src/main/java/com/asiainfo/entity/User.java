@@ -2,10 +2,20 @@ package com.asiainfo.entity;
 
 import java.util.List;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
+@XStreamAlias("user")
 public class User {
+	@XStreamAsAttribute
+	@XStreamAlias("user_id")
 	private int userId;
+	@XStreamAlias("user_name")
 	private String userName;
+	@XStreamAlias("password")
 	private String password;
+	@XStreamImplicit
 	private List<LoginLog> loginLogList;
 
 	public int getUserId() {

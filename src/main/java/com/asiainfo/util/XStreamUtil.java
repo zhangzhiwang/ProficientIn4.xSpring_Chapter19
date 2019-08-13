@@ -42,6 +42,30 @@ public class XStreamUtil {
 	}
 	
 	/**
+	 * Java类转成xml文件（使用注解）
+	 * 
+	 * @param object
+	 * @param fileName
+	 * @throws Exception
+	 * @author zhangzhiwang
+	 * @date Aug 13, 2019 4:02:09 PM
+	 */
+	public static void object2XmlAnnotation(Object object, String fileName) throws Exception {
+		// 手动注册标注了XStream注解的Java类
+//		xStream.processAnnotations(User.class);
+//		xStream.processAnnotations(LoginLog.class);
+		// 自动注册注了XStream注解的Java类
+		xStream.autodetectAnnotations(true);
+		
+		File file = new File(fileName);
+		if(!file.exists()) {
+			file.createNewFile();
+		}
+		FileOutputStream fileOutputStream = new FileOutputStream(file);
+		xStream.toXML(object, fileOutputStream);
+	}
+	
+	/**
 	 * User实体类转换成xml
 	 * 
 	 * @throws Exception
