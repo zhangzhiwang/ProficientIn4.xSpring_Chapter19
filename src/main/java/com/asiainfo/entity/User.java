@@ -6,16 +6,16 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
-@XStreamAlias("user")
+//@XStreamAlias("user")
 public class User {
-	@XStreamAsAttribute
-	@XStreamAlias("user_id")
+//	@XStreamAsAttribute
+//	@XStreamAlias("user_id")
 	private int userId;
-	@XStreamAlias("user_name")
+//	@XStreamAlias("user_name")
 	private String userName;
-	@XStreamAlias("password")
+//	@XStreamAlias("password")
 	private String password;
-	@XStreamImplicit
+//	@XStreamImplicit
 	private List<LoginLog> loginLogList;
 
 	public int getUserId() {
